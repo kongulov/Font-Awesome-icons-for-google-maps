@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+    <head>
+        <title>Font Awesome icons for google maps markers</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+        <style>
+            .map-icon-label i {
+                font-size: 24px;
+                color: #FFFFFF;
+                line-height: 55px;
+                text-align: center;
+                white-space: nowrap;
+            }
+        </style>
+    </head>
+    <body style="height: 100%;margin: 0px;">
+
+        <div id="map" style="height: 100%;"></div>
+
+        <!-- This GOOGLE API KEY is temporary -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj5TldXKMf4xDQvXdCLHN4dXIRaFKsGKY"></script>
+        <script src="../map-font-icons.js"></script>
+        <script>
+            function initMap(){
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 16,
+                    center: {lat: 40.37716400, lng: 49.84732900}
+                });
+
+                // school 1
+                addMarker({
+                    map     : map,
+                    lat     : 40.37516400,
+                    lng     : 49.84592900,
+                    color   : '#7A9EAF',
+                    icon    : 'fas fa-graduation-cap',
+                    shape   : SQUARE_PIN
+                });
+                // school 2
+                addMarker({
+                    map     : map,
+                    lat     : 40.37528500,
+                    lng     : 49.84914600,
+                    color   : '#7A9EAF',
+                    icon    : 'fas fa-graduation-cap',
+                    shape   : SHIELD
+                });
+                // Subway
+                addMarker({
+                    map     : map,
+                    lat     : 40.37965300,
+                    lng     : 49.84875500,
+                    color   : '#42A5F5',
+                    icon    : 'fas fa-subway',
+                    shape   : ROUTE
+                });
+                // Bus station
+                addMarker({
+                    map     : map,
+                    lat     : 40.377984,
+                    lng     : 49.845597,
+                    color   : '#3949AB',
+                    icon    : 'fas fa-bus',
+                    shape   : SQUARE_ROUNDED
+                });
+                
+            }
+            function addMarker(data){
+                new Marker({
+                    map: data.map,
+                    position: new google.maps.LatLng(data.lat, data.lng),
+                    icon: {
+                        path: data.shape,
+                        fillColor: data.color,
+                        fillOpacity: 1,
+                        strokeColor: '',
+                        strokeWeight: 0
+                    },
+                    map_icon_label: '<i class="'+data.icon+'"></i>'
+                });
+            }
+
+            google.maps.event.addDomListener(window, 'load', initMap);
+        </script>
+    </body>
+</html>
