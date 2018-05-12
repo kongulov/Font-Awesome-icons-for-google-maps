@@ -15,13 +15,12 @@ This code extends the [Google Maps Marker](https://developers.google.com/maps/do
 
 ### Include
 
-First, install the Font Awesome CDN and Google maps Api
+First, install the Font Awesome CDN and Google maps Api and map-font-icons.js
 ```html
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+<script src="map-font-icons.js"></script>
 ```
-
-To use the icons with Google Maps include `map-font-icons.js`
 
 ### Classes
 
@@ -29,6 +28,19 @@ All classes you can find on the site [Font Awesome](https://fontawesome.com/icon
 
 ```html
 <i class="fas fa-heart"></i>
+```
+### Styling the Icon
+
+Explict styles to icons being used on a Google Map should be applied with `.map-icon-label i` CSS selector.
+
+```css
+.map-icon-label i {
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 55px;
+    text-align: center;
+    white-space: nowrap;
+}
 ```
 
 ### Creating a Marker
