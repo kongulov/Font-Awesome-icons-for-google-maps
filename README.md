@@ -15,13 +15,12 @@ This code extends the [Google Maps Marker](https://developers.google.com/maps/do
 
 ### Include
 
-First, install the Font Awesome CDN and Google maps Api
+First, install the Font Awesome CDN and Google maps Api and map-font-icons.js
 ```html
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+<script src="map-font-icons.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 ```
-
-To use the icons with Google Maps include `map-font-icons.js`
 
 ### Classes
 
