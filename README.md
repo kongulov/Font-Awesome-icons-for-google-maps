@@ -29,6 +29,19 @@ All classes you can find on the site [Font Awesome](https://fontawesome.com/icon
 ```html
 <i class="fas fa-heart"></i>
 ```
+### Styling the Icon
+
+Explict styles to icons being used on a Google Map should be applied with `.map-icon-label i` CSS selector.
+
+```css
+.map-icon-label i {
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 55px;
+    text-align: center;
+    white-space: nowrap;
+}
+```
 
 ### Creating a Marker
 
