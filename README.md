@@ -3,6 +3,8 @@ Font Awesome icons for google maps markers
 
 This code for use Font Awesome with Google Maps API and Google Places API using SVG markers and icon labels
 
+![Screenshot](https://user-images.githubusercontent.com/33090344/39980359-986524fe-575c-11e8-997a-c48f41765457.png)
+
 ## Quick start
 
 There are 2 ways to quickly download and use the code
