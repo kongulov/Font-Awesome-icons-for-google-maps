@@ -1,5 +1,5 @@
 {
-  "name": "font-awesome-icons-for-google-maps",
+  "name": "@kongulov/font-awesome-icons-for-google-maps",
   "version": "1.0.0",
   "authos": "Ramiz Kongulov",
   "description": "This code for use Font Awesome with Google Maps API and Google Places API using SVG markers and icon labels",
